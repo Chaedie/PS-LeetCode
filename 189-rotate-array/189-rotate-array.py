@@ -3,16 +3,26 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        n = len(nums)
-        start = 0 - k
-        end = n - k
-        
+               
         # 1st Sol:
-        for _ in range(k):
-            nums.insert(0, nums[n-1])
-        for _ in range(k):
-            nums.pop()
-            
+#         n = len(nums)
+#         for _ in range(k):
+#             nums.insert(0, nums[n-1])
+#         for _ in range(k):
+#             nums.pop()
             
         # 2nd Sol:
+        n = len(nums)
+        k = k % n
+        right = n - k
+        left = 0
+        tmp = nums.copy()
+        for i in range(n):
+            if right <= n - 1:
+                nums[i] = tmp[right] 
+                right += 1
+            else:
+                nums[i] = tmp[left]
+                left += 1
+        
         
