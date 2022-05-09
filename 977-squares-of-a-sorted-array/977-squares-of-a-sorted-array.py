@@ -14,9 +14,9 @@ class Solution:
             sqr_start = nums[start] ** 2
             sqr_end = nums[end] ** 2
             
-            if start == end:
-                result[i] = sqr_start
-                break                                  
+            # if start == end:
+            #     result[i] = sqr_start
+            #     break                                  
             if sqr_start >= sqr_end :
                 result[i] = sqr_start
                 start += 1
