@@ -1,7 +1,6 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
         # 2nd sol
-        # 2nd sol
         n = len(s)
         right = n - 1
         tmp = [" " for _ in range(n)]
@@ -15,22 +14,14 @@ class Solution:
             if left == 0:
                 for j in range(right + 1):
                         tmp[left + j] = s[right - j]
-
-        result =""
-        for char in tmp:
-            result += char
+        
+        result = ''.join(tmp)
         return result
 
-                
-        ## 뒤에서부터 leftIndex -=1 하면서  0찾아 내려오기
-        ## 0 찾으면 leftIndex + 1 부터, rightIndex 까지 스위칭하기
-        ## rightIndex = leftIndex - 1
-        ## leftIndex - 1 부터 leftIndex -= 1 하면서  0찾아 내려오기 반복
-        ## leftindex == -1 되면 종료
-        
-        ## result =""
-        ## for char in tmp:
-        ##      result += char
+        # result =""
+        # for char in tmp:
+        #     result += char
+        # return result
         
         # 1st sol
 #         def switchWordOder(start):
@@ -61,8 +52,3 @@ class Solution:
 #         for char in tmp:
 #             result += char
 #         return result
-
-       
-        
-        
-            
