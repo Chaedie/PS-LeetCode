@@ -6,14 +6,6 @@ class Solution {
         int mid = ((right - left) / 2) + left;
 
         for (int i = 0; i < n; i++) {
-            // if(n == 1) == if(mid == n-1)
-            // if (n == 1) {
-            //     if (nums[mid] < target){
-            //         return 1;
-            //     }
-            //     return 0;
-            // }
-            // mid == n - 1;
             if (nums[mid] == target) {
                 return mid;
             }
@@ -24,13 +16,6 @@ class Solution {
                 }
                 return n - 1;
             }
-            // mid == 0
-//            if (mid == 0) {
-//                if (nums[mid] < target) {
-//                    return mid + 1;
-//                }
-//                return mid;
-//            }
             // 0 <= mid < n - 1
             if (mid >= 0 && mid < n - 1) {
 
